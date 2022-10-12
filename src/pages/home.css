@@ -1,8 +1,36 @@
-.home-window {
+.home-window{
+  /* font-weight: 700; */
+  overflow: auto;
+}
+
+.tutorial-window {
+  /* width: 300px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: auto; */
+  font-weight: 700;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.tutorial-window img{
+  width: 700px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: 2px solid black;
+}
+
+.warning {
+  font-weight: 500;
+}
+
+
+.input-window {
   width: 300px;
   text-align: center;
   margin: auto;
-  margin-top: 200px;
+  margin-bottom: 100px;
 }
 
 .end-window {
