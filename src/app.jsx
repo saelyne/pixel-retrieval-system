@@ -20,6 +20,8 @@ const App = () => {
   const [imageInfo, setImageInfo] = useState();
   const [answerInfo, setAnswerInfo] = useState();
 
+  const [modeID, setModeID] = useState("abtw");
+
   useEffect(() => {
     setImageInfo(groupImageInfo[questionID]);
     setAnswerInfo(groupAnswerInfo[questionID]);
@@ -35,6 +37,7 @@ const App = () => {
             element={
               <Home
                 setUserID={setUserID}
+                setModeID={setModeID}
                 setGroupImageInfo={setGroupImageInfo}
                 setGroupAnswerInfo={setGroupAnswerInfo}
               />
@@ -50,10 +53,11 @@ const App = () => {
                 setQuestionID={setQuestionID}
                 imageInfo={imageInfo}
                 answerInfo={answerInfo}
+                modeID={modeID}
               />
             }
           />
-          <Route exact path="/end" element={<End userID={userID} />} />
+          <Route exact path="/end" element={<End modeID={modeID} />} />
         </Routes>
       </div>
     </BrowserRouter>

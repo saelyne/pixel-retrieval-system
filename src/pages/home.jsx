@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 
 import { imageInfoCollection, answerInfoCollection } from "../image";
 
-const Home = ({ setUserID, setGroupImageInfo, setGroupAnswerInfo }) => {
+const Home = ({ setUserID, setModeID, setGroupImageInfo, setGroupAnswerInfo }) => {
   const idRef = React.createRef();
   const navigate = useNavigate();
   const { id } = useParams();
@@ -16,6 +16,7 @@ const Home = ({ setUserID, setGroupImageInfo, setGroupAnswerInfo }) => {
   useEffect(() => {
     setGroupImageInfo(imageInfoCollection[id]);
     setGroupAnswerInfo(answerInfoCollection[id]);
+    setModeID(id);
   });
 
   const onClickSubmit = () => {
@@ -30,7 +31,7 @@ const Home = ({ setUserID, setGroupImageInfo, setGroupAnswerInfo }) => {
         {/* Do not refresh the page while completing the task. */}
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>To start the task, please enter your ID.</Form.Label>
+            <Form.Label>To start the task, please enter your <span style={{fontWeight: 800}}>unique Prolific ID.</span></Form.Label>
             <Form.Control placeholder="Enter ID" ref={idRef} />
             <Form.Text className="text-muted">
               {/* We'll never share your email with anyone else. */}

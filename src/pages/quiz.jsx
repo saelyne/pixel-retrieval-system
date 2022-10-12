@@ -8,7 +8,7 @@ import { ref, update } from "firebase/database";
 import "./home.css";
 import Button from "@mui/material/Button";
 
-const Quiz = ({ userID, questionID, setQuestionID, imageInfo, answerInfo }) => {
+const Quiz = ({ userID, questionID, setQuestionID, imageInfo, answerInfo, modeID }) => {
   const MAX_SELECTED_COUNT = 5;
   const NUM_IMAGES = 20;
   const NUM_QUESTIONS = 20;
@@ -94,7 +94,7 @@ const Quiz = ({ userID, questionID, setQuestionID, imageInfo, answerInfo }) => {
   // database
   const logData = () => {
     if (userID === "") return;
-    const save_path = "/Log/" + userID;
+    const save_path = "/Log/" + modeID + "/" + userID;
     const updates = {};
     updates[save_path + "/" + questionID + "/" + logIndex] = {
       numCorrect: correct.length,

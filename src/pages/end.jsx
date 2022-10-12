@@ -1,14 +1,16 @@
 import React from "react";
 
 import "./home.css";
+import { modeCode } from "../code";
 
-const End = ({ userID }) => {
+const End = ({ modeID }) => {
   return (
     <>
       <div className="end-window">
-        <h4>User ID: {userID}</h4>
-        <h4>You've done all the tasks.</h4>
-        <h4>Thank you for participating in our study.</h4>
+        <h5>Completion Code: {modeCode[modeID]}</h5>
+        <br></br>
+        <h5>You've done all the tasks.</h5>
+        <h5>Thank you for participating in our study.</h5>
       </div>
     </>
   );
