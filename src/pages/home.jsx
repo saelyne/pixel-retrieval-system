@@ -36,8 +36,8 @@ const Home = ({ setUserID, setModeID, setGroupImageInfo, setGroupAnswerInfo }) =
           <div>For each question, there is a <span style={{color:"Purple"}}>Target Image</span> (left), and 20 <span style={{color:"Purple"}}>Candidate Images</span> (right).</div>
           <div>Among Candidate Images, you need to choose 5 images that you think contain the object in the Target Image. </div>
           <img src={main}></img>
-          <div>Sometimes, there will be hints that indicate a certain part of the image that MIGHT contain the target image as below.</div>
-          <div>For this type of questions, you can compare only the <span style={{color:"Brown"}}>highlighted part</span> with the Target Image to complete the task faster. </div>
+          <div>Sometimes, there will be hints that indicate a certain part of the image that MIGHT contain the target image as shown below.</div>
+          <div>For this type of questions, you only have to compare the <span style={{color:"Brown"}}>highlighted parts</span>, which can help you complete the task faster. </div>
           <img src={labeled}></img>
           <div className="warning">
             * Do not refresh the page while completing the task. <br />
