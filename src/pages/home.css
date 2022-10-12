@@ -1,0 +1,76 @@
+.home-window {
+  width: 300px;
+  text-align: center;
+  margin: auto;
+  margin-top: 200px;
+}
+
+.end-window {
+  text-align: center;
+  margin-top: 350px;
+}
+
+.quiz-window {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.query {
+  width: 420px;
+}
+
+.query img {
+  padding: 5px 5px;
+  width: 400px;
+}
+
+.query-description {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.candidate-images {
+  overflow: auto;
+  height: 83vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 5px 5px 5px 5px;
+}
+
+.candidate-images img {
+  width: 430px;
+  cursor: pointer;
+}
+
+.candidate-images img:hover {
+  /* outline: 5px solid red; */
+  box-shadow: 8px 8px 8px #ccc;
+}
+
+.candidate-images .selected {
+  outline: 5px solid blue;
+}
+
+.candidate-images .correct {
+  filter: grayscale(100%);
+  cursor: not-allowed;
+}
+
+.quiz-window h3 {
+  margin-left: 10px;
+}
+
+.candidate-images .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
