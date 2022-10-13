@@ -9,6 +9,10 @@ import End from "./pages/end";
 import { imageInfoCollection, answerInfoCollection } from "./image";
 
 const App = () => {
+  const MAX_SELECTED_COUNT = 3;
+  const NUM_IMAGES = 12;
+  const NUM_QUESTIONS = 20;
+
   const [userID, setUserID] = useState("");
   const [questionID, setQuestionID] = useState(0);
   const [groupImageInfo, setGroupImageInfo] = useState(
@@ -19,7 +23,6 @@ const App = () => {
   );
   const [imageInfo, setImageInfo] = useState();
   const [answerInfo, setAnswerInfo] = useState();
-
   const [modeID, setModeID] = useState("abtw");
 
   useEffect(() => {
@@ -40,6 +43,9 @@ const App = () => {
                 setModeID={setModeID}
                 setGroupImageInfo={setGroupImageInfo}
                 setGroupAnswerInfo={setGroupAnswerInfo}
+                MAX_SELECTED_COUNT={MAX_SELECTED_COUNT}
+                NUM_IMAGES={NUM_IMAGES}
+                NUM_QUESTIONS={NUM_QUESTIONS}
               />
             }
           />
@@ -54,6 +60,9 @@ const App = () => {
                 imageInfo={imageInfo}
                 answerInfo={answerInfo}
                 modeID={modeID}
+                MAX_SELECTED_COUNT={MAX_SELECTED_COUNT}
+                NUM_IMAGES={NUM_IMAGES}
+                NUM_QUESTIONS={NUM_QUESTIONS}
               />
             }
           />

@@ -8,10 +8,7 @@ import { ref, update } from "firebase/database";
 import "./home.css";
 import Button from "@mui/material/Button";
 
-const Quiz = ({ userID, questionID, setQuestionID, imageInfo, answerInfo, modeID }) => {
-  const MAX_SELECTED_COUNT = 3;
-  const NUM_IMAGES = 12;
-  const NUM_QUESTIONS = 20;
+const Quiz = ({ userID, questionID, setQuestionID, imageInfo, answerInfo, modeID, MAX_SELECTED_COUNT, NUM_IMAGES, NUM_QUESTIONS }) => {
   const enumerate = Array.from(Array(NUM_IMAGES).keys());
   const navigate = useNavigate();
 
@@ -143,7 +140,7 @@ const Quiz = ({ userID, questionID, setQuestionID, imageInfo, answerInfo, modeID
       <Header content={`Question ${questionID + 1} / ${NUM_QUESTIONS}`} />
       <div className="quiz-window">
         <div className="query">
-          <h4>Target Image</h4>
+          <h5>Target Image</h5>
           <img src={imageInfo['query']} alt="" />
           <div className="query-description">
             <h4 style={{ marginTop: "15px", marginBottom: "15px" }}>
@@ -166,10 +163,10 @@ const Quiz = ({ userID, questionID, setQuestionID, imageInfo, answerInfo, modeID
           </div>
         </div>
         <div className="candidate">
-          <h4>
+          <h5>
             Candidate Images (scroll ↓) - Choose {MAX_SELECTED_COUNT} images
             that contain the Target Image.
-          </h4>
+          </h5>
           <div className="candidate-images">
             {enumerate.map((item, ind) => (
               <img
