@@ -32,7 +32,7 @@ const Home = ({ setUserID, setModeID, setGroupImageInfo, setGroupAnswerInfo, MAX
       <Header content="Welcome!" />
       <div className="home-window">
         <div className="tutorial-window">
-          <div>In this study, you will go through {NUM_QUESTIONS} questions that ask you to choose images.</div>
+          <div>In this study, you will go through {NUM_QUESTIONS-2} questions that ask you to choose images.</div>
           <div>For each question, there is a <span style={{color:"Purple"}}>Target Image</span> (left), and {NUM_IMAGES} <span style={{color:"Purple"}}>Candidate Images</span> (right).</div>
           <div>Among Candidate Images, you need to <span style={{color:"Brown"}}>choose {MAX_SELECTED_COUNT} images that you think contain the object in the Target Image</span>. </div>
           <img src={main}></img>

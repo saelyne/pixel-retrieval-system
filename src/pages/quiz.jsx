@@ -37,6 +37,12 @@ const Quiz = ({ userID, questionID, setQuestionID, imageInfo, answerInfo, modeID
         if (questionID === NUM_QUESTIONS - 1) {
           alert("Great job! You've done all the tasks.");
           navigate("/end");
+        } else if (questionID === 0) {
+          alert("Great job! Moving on to the next practice question.");
+          setQuestionID(questionID + 1);
+        } else if (questionID === 1) {
+          alert("Great job! Now Let's start the task!");
+          setQuestionID(questionID + 1);
         } else {
           alert("Great job! Moving on to the next question.");
           setQuestionID(questionID + 1);
