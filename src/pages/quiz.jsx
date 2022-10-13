@@ -7,6 +7,7 @@ import { ref, update } from "firebase/database";
 
 import "./home.css";
 import Button from "@mui/material/Button";
+import Alert from 'react-bootstrap/Alert';
 
 const Quiz = ({ userID, questionID, setQuestionID, imageInfo, answerInfo, modeID, MAX_SELECTED_COUNT, NUM_IMAGES, NUM_QUESTIONS }) => {
   const enumerate = Array.from(Array(NUM_IMAGES).keys());
@@ -137,7 +138,11 @@ const Quiz = ({ userID, questionID, setQuestionID, imageInfo, answerInfo, modeID
 
   return (
     <>
-      <Header content={`Question ${questionID + 1} / ${NUM_QUESTIONS}`} />
+      <Header questionID={questionID} NUM_QUESTIONS={NUM_QUESTIONS} />
+      {questionID === 1 ? <div className="label-warning"><Alert variant="danger">
+      For this type of questions, you only have to compare the highlighted parts, which can help you complete the task faster.
+        </Alert></div>:<></>
+      }
       <div className="quiz-window">
         <div className="query">
           <h5>Target Image</h5>

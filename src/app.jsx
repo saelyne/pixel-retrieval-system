@@ -11,7 +11,7 @@ import { imageInfoCollection, answerInfoCollection } from "./image";
 const App = () => {
   const MAX_SELECTED_COUNT = 3;
   const NUM_IMAGES = 12;
-  const NUM_QUESTIONS = 20;
+  const NUM_QUESTIONS = 18;
 
   const [userID, setUserID] = useState("");
   const [questionID, setQuestionID] = useState(0);
