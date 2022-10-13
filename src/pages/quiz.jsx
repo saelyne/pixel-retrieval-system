@@ -9,8 +9,8 @@ import "./home.css";
 import Button from "@mui/material/Button";
 
 const Quiz = ({ userID, questionID, setQuestionID, imageInfo, answerInfo, modeID }) => {
-  const MAX_SELECTED_COUNT = 5;
-  const NUM_IMAGES = 20;
+  const MAX_SELECTED_COUNT = 3;
+  const NUM_IMAGES = 12;
   const NUM_QUESTIONS = 20;
   const enumerate = Array.from(Array(NUM_IMAGES).keys());
   const navigate = useNavigate();
@@ -44,9 +44,9 @@ const Quiz = ({ userID, questionID, setQuestionID, imageInfo, answerInfo, modeID
           setQuestionID(questionID + 1);
         }
       } else {
-        for (let index of correct) {
-          document.getElementById(index.toString()).classList.add("correct");
-        }
+        // for (let index of correct) {
+        //   document.getElementById(index.toString()).classList.add("correct");
+        // }
         alert(
           `You got ${correct.length} right. Find ${
             MAX_SELECTED_COUNT - correct.length

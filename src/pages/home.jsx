@@ -50,7 +50,7 @@ const Home = ({ setUserID, setModeID, setGroupImageInfo, setGroupAnswerInfo }) =
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             {/* <Form.Label>To start the task, please enter your <span style={{fontWeight: 800}}>unique Prolific ID.</span></Form.Label> */}
-            <Form.Control placeholder="Enter ID" ref={idRef} />
+            <Form.Control placeholder="Enter your unique Prolific ID" ref={idRef} />
             <Form.Text className="text-muted">
               {/* We'll never share your email with anyone else. */}
             </Form.Text>
