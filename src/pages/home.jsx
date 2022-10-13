@@ -34,10 +34,10 @@ const Home = ({ setUserID, setModeID, setGroupImageInfo, setGroupAnswerInfo }) =
         <div className="tutorial-window">
           <div>In this study, you will go through 20 questions that ask you to choose images.</div>
           <div>For each question, there is a <span style={{color:"Purple"}}>Target Image</span> (left), and 20 <span style={{color:"Purple"}}>Candidate Images</span> (right).</div>
-          <div>Among Candidate Images, you need to choose 5 images that you think contain the object in the Target Image. </div>
+          <div>Among Candidate Images, you need to <span style={{color:"Brown"}}>choose 5 images that you think contain the object in the Target Image</span>. </div>
           <img src={main}></img>
-          <div>Sometimes, there will be hints that indicate a certain part of the image that MIGHT contain the target image as shown below.</div>
-          <div>For this type of questions, you only have to compare the <span style={{color:"Brown"}}>highlighted parts</span>, which can help you complete the task faster. </div>
+          <div>Sometimes, there will be hints that indicate a certain part of the image that MIGHT contain the Target Image as shown below.</div>
+          <div>For this type of questions, <span style={{color:"Brown"}}> you only have to compare the highlighted parts</span>, which can help you complete the task faster. </div>
           <img src={labeled}></img>
           <div className="warning">
             * Do not refresh the page while completing the task. <br />
