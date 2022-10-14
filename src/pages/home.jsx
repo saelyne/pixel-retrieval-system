@@ -10,6 +10,7 @@ import { imageInfoCollection, answerInfoCollection } from "../image";
 import main from "../static/img/main.png";
 import selected from "../static/img/selected.png";
 import labeled from "../static/img/labeled.png";
+import Alert from "react-bootstrap/Alert";
 
 const Home = ({
   setUserID,
@@ -73,11 +74,17 @@ const Home = ({
           </div>
           <img src={labeled}></img>
           <div className="warning">
+            <div className="intro-warning">
+              <Alert variant="danger">
+                The task will take ~15 min on average. <br /> Since we measure
+                the time taken, please do not take a rest in middle of each
+                question as much as possible.
+              </Alert>
+            </div>
             * Do not refresh the page or go back to a previous page while
-            completing the task. <br />
-            * Data we collect: user ID and time taken to complete each question.{" "}
-            <br />* We collect your ID to verify you on Prolific. The collected
-            IDs will be discarded after the study.
+            completing the task. <br />* Data we collect: user ID and time taken
+            to complete each question. <br />* We collect your ID to verify you
+            on Prolific. The collected IDs will be discarded after the study.
             <div style={{ marginTop: "15px", marginBottom: "15px" }}>
               If you agree with the above terms, please enter your{" "}
               <span style={{ fontWeight: 800 }}>unique Prolific ID</span> to

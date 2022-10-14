@@ -1,4 +1,4 @@
-.home-window{
+.home-window {
   /* font-weight: 700; */
   overflow: auto;
 }
@@ -14,7 +14,7 @@
   margin-top: 50px;
 }
 
-.tutorial-window img{
+.tutorial-window img {
   width: 700px;
   margin-top: 20px;
   margin-bottom: 50px;
@@ -24,7 +24,6 @@
 .warning {
   font-weight: 500;
 }
-
 
 .input-window {
   width: 300px;
@@ -151,4 +150,7 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+.intro-warning {
 }
