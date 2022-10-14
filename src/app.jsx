@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/home";
 import Quiz from "./pages/quiz";
 import End from "./pages/end";
+import Code from "./pages/code";
 import { imageInfoCollection, answerInfoCollection } from "./image";
 
 const App = () => {
@@ -66,7 +67,12 @@ const App = () => {
               />
             }
           />
-          <Route exact path="/end" element={<End modeID={modeID} />} />
+          <Route
+            exact
+            path="/end"
+            element={<End modeID={modeID} userID={userID} />}
+          />
+          <Route exact path="/powjdo" element={<Code />} />
         </Routes>
       </div>
     </BrowserRouter>

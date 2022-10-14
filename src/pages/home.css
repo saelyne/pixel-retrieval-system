@@ -33,7 +33,7 @@
   margin-bottom: 100px;
 }
 
-.end-window {
+.code-window {
   text-align: center;
   margin-top: 350px;
 }
@@ -113,4 +113,42 @@
   font-size: 20px;
   font-weight: 700;
   color: brown; */
+}
+
+.end-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.end-image-box {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
+.end-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.end-image img {
+  width: 500px;
+  margin-top: 10px;
+}
+
+.slider {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }

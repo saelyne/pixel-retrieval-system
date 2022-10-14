@@ -18,8 +18,25 @@ def files_in_image_dir(root_dir, num):
     return images
 
 
-def generate_command_and_answer(images):
-    random.shuffle(images)
+def reorder_images(images, answer):
+    reordered = []
+    for item in answer:
+        i = item.rfind('/')
+        image_file_name = item[i:]
+        for image in images:
+            if image_file_name in image:
+                reordered.append(image)
+                break
+    return reordered
+
+
+def generate_command_and_answer(question_dir, images):
+    if question_dir in order_dict:
+        images = reorder_images(images, order_dict[question_dir])
+    else:
+        random.shuffle(images)
+        order_dict[question_dir] = images
+    # print(images)
     command = ""
     answer = []
     for i in range(len(images)):
@@ -59,6 +76,7 @@ mode = {'abtw': [1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0],
         'dpaf': [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]}
 command_dict = {}
 answer_dict = {}
+order_dict = {}  # {question_id: [image_id_1, image_id_2, ...], ...}
 
 for key in mode.keys():
     command_set = []
@@ -68,12 +86,14 @@ for key in mode.keys():
         for question_dir in dirs:
             if question_dir == 'test':
                 images = generate_image_list(root, question_dir, False)
-                command, answer = generate_command_and_answer(images)
+                command, answer = generate_command_and_answer(
+                    question_dir, images)
                 command_set.append(command)
                 answer_set.append(answer)
 
                 images = generate_image_list(root, question_dir, True)
-                command, answer = generate_command_and_answer(images)
+                command, answer = generate_command_and_answer(
+                    question_dir, images)
                 command_set.append(command)
                 answer_set.append(answer)
                 break
@@ -89,7 +109,7 @@ for key in mode.keys():
                 images = generate_image_list(root, question_dir, False)
 
             # print(*images, sep="\n")
-            command, answer = generate_command_and_answer(images)
+            command, answer = generate_command_and_answer(question_dir, images)
             command_set.append(command)
             answer_set.append(answer)
 

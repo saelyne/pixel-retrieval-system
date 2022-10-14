@@ -29,7 +29,7 @@ const Home = ({ setUserID, setModeID, setGroupImageInfo, setGroupAnswerInfo, MAX
 
   return (
     <>
-      <Header content="Welcome!" />
+      <Header questionID = {-1} NUM_QUESTIONS = {NUM_QUESTIONS} />
       <div className="home-window">
         <div className="tutorial-window">
           <div>In this study, you will go through {NUM_QUESTIONS-2} questions that ask you to choose images.</div>
