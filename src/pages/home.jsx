@@ -62,7 +62,7 @@ const Home = ({
           <img src={main}></img>
           <div>
             Sometimes, there will be hints that indicate a certain part of the
-            image that MIGHT contain the Target Image as shown below.
+            image that MIGHT contain the Target Object as shown below.
           </div>
           <div>
             For this type of questions,{" "}

@@ -166,7 +166,7 @@ const Quiz = ({
       )}
       <div className="quiz-window">
         <div className="query">
-          <h5>Target Image</h5>
+          <h5>Target Object</h5>
           <img src={imageInfo["query"]} alt="" />
           <div className="query-description">
             <h4 style={{ marginTop: "15px", marginBottom: "15px" }}>
@@ -191,7 +191,7 @@ const Quiz = ({
         <div className="candidate">
           <h5>
             Candidate Images (scroll ↓) - Choose {MAX_SELECTED_COUNT} images
-            that contain the Target Image.
+            that contain the Target Object.
           </h5>
           <div className="candidate-images" id="candidate-images">
             {enumerate.map((item, ind) => (
